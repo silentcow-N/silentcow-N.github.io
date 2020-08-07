@@ -176,7 +176,7 @@ if (autoChangeMode === '1') {
       appKey: 'WQPP2IUvnbXswLjEgsgSJy0T',
       placeholder: '记得留下你的昵称和邮箱....可以快速收到回复',
       avatar: 'monsterid',
-      meta: '昵称,邮箱,主页'.split(','),
+      meta: '昵称(必填),邮箱(必填),主页'.split(','),
       pageSize: '10',
       lang: 'zh-CN',
       recordIP: true,
@@ -186,7 +186,7 @@ if (autoChangeMode === '1') {
       enableQQ: false,
       path: window.location.pathname,
     });
-    if ('nick,mail') { valine.config.requiredFields= 'nick,mail'.split(',') }
+    if ('昵称(必填),邮箱(必填)') { valine.config.requiredFields= '昵称(必填),邮箱(必填)'.split(',') }
   }
 
   if (typeof Valine === 'function') initValine() 
