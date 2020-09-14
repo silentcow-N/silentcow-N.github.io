@@ -4,6 +4,39 @@
   
     
     <entry>
+      <title>【剑指Offer】II-数组中数字出现的次数 II</title>
+      <link href="/2020/09/14/%E9%9D%A2%E8%AF%95%E9%A2%9856%20-%20II-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%20II/"/>
+      <url>/2020/09/14/%E9%9D%A2%E8%AF%95%E9%A2%9856%20-%20II-%E6%95%B0%E7%BB%84%E4%B8%AD%E6%95%B0%E5%AD%97%E5%87%BA%E7%8E%B0%E7%9A%84%E6%AC%A1%E6%95%B0%20II/</url>
+      
+        <content type="html"><![CDATA[<h2 id="题目："><a href="#题目：" class="headerlink" title="题目："></a>题目：</h2><p>在一个数组 nums 中除一个数字只出现一次之外，其他数字都出现了三次。请找出那个只出现一次的数字。</p><p>示例 1：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [3,4,3,3]</span><br><span class="line">输出：4</span><br></pre></td></tr></table></figure><p>示例 2：</p><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">输入：nums &#x3D; [9,1,7,9,7,9,7]</span><br><span class="line">输出：1</span><br></pre></td></tr></table></figure><h2 id="题解："><a href="#题解：" class="headerlink" title="题解："></a>题解：</h2><p>题解暂时性略，后期想到了再来写吧，吐槽一下自己，看了看别的大佬们都在用 “位运算”来解决这道题，而 自己 Map都是那种一知半解。。。</p><h2 id="代码："><a href="#代码：" class="headerlink" title="代码："></a>代码：</h2><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">singleNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        Map&lt;Integer,Integer&gt; result  = <span class="keyword">new</span> HashMap&lt;Integer,Integer&gt;();</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">int</span> num : nums) &#123;</span><br><span class="line">           <span class="keyword">int</span> count =  result.getOrDefault(num,<span class="number">0</span>) + <span class="number">1</span>;</span><br><span class="line">            result.put(num,count);</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;Integer,Integer&gt; entry : result.entrySet()) &#123;</span><br><span class="line">            <span class="keyword">if</span> (entry.getValue() == <span class="number">1</span>) &#123;</span><br><span class="line">                <span class="keyword">return</span> entry.getKey();</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> 算法 </category>
+          
+          <category> Leetcode </category>
+          
+          <category> 剑指Offer </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Leetcode </tag>
+            
+            <tag> 算法 </tag>
+            
+            <tag> 剑指Offer </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【Java面试总结】Redis</title>
       <link href="/2020/09/11/%E3%80%90Java%E9%9D%A2%E8%AF%95%E3%80%91Redis/"/>
       <url>/2020/09/11/%E3%80%90Java%E9%9D%A2%E8%AF%95%E3%80%91Redis/</url>
